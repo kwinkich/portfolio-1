@@ -106,6 +106,10 @@ body {
 	overflow-x: hidden;
 }
 
+.lock {
+	overflow: hidden;
+}
+
 a {
 	text-decoration: none;
 }
@@ -154,8 +158,6 @@ ul {
 	gap: 30px 0;
 }
 
-.menu-mob-li {}
-
 .menu-mob-link {
 	position: relative;
 	font-family: 'Futura PT';
@@ -164,9 +166,16 @@ ul {
 	color: var(--txt-color-1);
 }
 
-.menu-mob-logo {}
 
-.right {}
+.paragraph-list {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	font-family: 'MakLight';
+	font-size: 24px;
+	transform: translate(0%, -50%);
+}
+
 
 /* GLOBAL */
 
@@ -470,20 +479,19 @@ ul {
 	background-color: var(--txt-color-1);
 }
 
-
-
-
 .about-me {
 	margin-top: 210px;
 }
 
 .text-slide {
+	position: relative;
 	margin-top: 210px;
 	margin-bottom: 60px;
 	border: 1px solid var(--txt-color-1);
 	border-left: none;
 	border-right: none;
-	height: 50px;
+	height: 60px;
+	overflow: hidden;
 }
 
 .about-me-flex {
