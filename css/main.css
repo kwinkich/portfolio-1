@@ -1,0 +1,891 @@
+@import url('../fonts/Mak/MAK.css');
+@import url('../fonts/FururaPT/stylesheet.css');
+@import url('../fonts/Caravan/stylesheet.css');
+
+/* *,
+*::before,
+*::after {
+	border: 1px solid red;
+} */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html,
+body {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+:root {
+	--main-color-1: #483B2D;
+	--txt-color-1: #1E1E1E;
+	--bg-color-1: #F4EFE8;
+	--main-color-2: #907E71;
+
+}
+
+
+/* GLOBAL */
+
+.h1 {
+	font-family: 'MakLight';
+	font-size: 100px;
+	line-height: 130%;
+}
+
+.h2 {
+	font-family: 'MakLight';
+	font-size: 42px;
+	line-height: 130%;
+}
+
+.h3 {
+	position: relative;
+	font-family: 'MakLight';
+	font-size: 32px;
+	line-height: 130%;
+}
+
+.button-navigate {
+	font-family: 'Futura PT';
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 130%;
+	background: none;
+	border: none;
+	transition: font-weight 0.1s ease-in-out;
+}
+
+.button-navigate:hover,
+.button-navigate.active {
+	font-weight: 400;
+}
+
+/* Header */
+.header {
+	padding-top: 30px;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0px 20px;
+	margin: 0 auto;
+}
+
+.header-ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-column-links {
+	display: flex;
+	column-gap: 45px;
+}
+
+.header-link {
+	position: relative;
+	font-family: 'Futura PT';
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--txt-color-1);
+}
+
+.header-logo {
+	font-family: 'MakBold';
+	font-size: 24px;
+	color: var(--main-color-1);
+	text-align: center;
+}
+
+.right {
+	width: 250px;
+	justify-content: end;
+}
+
+.header__button-menu {
+	position: relative;
+	display: none;
+	width: 40px;
+	height: 20px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.button-menu__line {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 2px;
+	left: 0;
+	background-color: var(--txt-color-1);
+}
+
+.line-1 {
+	top: 0px;
+}
+
+.line-2 {
+	top: 10px;
+}
+
+.line-3 {
+	top: 20px;
+}
+
+/* Main */
+
+.main {
+	margin-top: 130px;
+}
+
+.main-flex {
+	position: relative;
+	display: flex;
+	align-items: end;
+}
+
+.first-block {
+	padding-right: 140px;
+}
+
+.second-block {
+	position: relative;
+}
+
+.second-block-tablet {
+	display: none;
+	width: max-content;
+}
+
+.third-block {
+	position: absolute;
+	top: -60px;
+	right: 10px;
+}
+
+.h1 span {
+	color: white;
+}
+
+.h1-visual-main {
+	position: absolute;
+	width: max-content;
+	bottom: 0px;
+	left: 47px;
+	text-transform: uppercase;
+}
+
+.h1-visual-main::before {
+	position: absolute;
+	content: '';
+	top: -50px;
+	right: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--txt-color-1);
+	z-index: -1;
+}
+
+.h3-visual-main-first {
+	padding-bottom: 38px;
+	text-transform: uppercase;
+}
+
+.h3-visual-main-first::before {
+	position: absolute;
+	content: "";
+	top: -20px;
+	left: 0;
+	display: block;
+	width: 416px;
+	height: 1px;
+	background-color: var(--txt-color-1);
+}
+
+.h3-visual-main-first::after {
+	position: absolute;
+	content: "";
+	display: block;
+	bottom: -1px;
+	left: 0;
+	width: 400px;
+	height: 1px;
+	z-index: -1;
+	background-color: var(--txt-color-1);
+}
+
+.h3-visual-main-second-tablet {
+	position: relative;
+	text-transform: uppercase;
+}
+
+.h3-visual-main-second-tablet::before {
+	position: absolute;
+	content: '';
+	width: 130%;
+	left: -40px;
+	top: -20px;
+	background-color: var(--txt-color-1);
+	height: 1px;
+	z-index: -1;
+}
+
+.main-img-1 {
+	border-top-left-radius: 270px;
+	border-top-right-radius: 270px;
+}
+
+.main-img-2 {
+	margin-bottom: 32px;
+}
+
+.link-padding {
+	padding-top: 30px;
+}
+
+.main-link,
+.social-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.main-link p {
+	font-family: 'Futura PT', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: var(--txt-color-1);
+	margin-right: 32px;
+	width: max-content;
+}
+
+.circle-link {
+	position: relative;
+	width: 55px;
+	height: 55px;
+	border: 2px solid var(--main-color-1);
+	border-radius: 50%;
+}
+
+.circle-link::after {
+	position: absolute;
+	content: '';
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/icons/Arrow.svg');
+	background-repeat: no-repeat;
+	background-position: -20% 50%;
+	transition: background-position 0.3s ease-in-out;
+}
+
+.main-link:hover .circle-link::after {
+	background-position: 50% 50%;
+
+}
+
+.social-link p {
+	font-family: 'MakBold';
+	font-size: 24px;
+	line-height: 130%;
+	color: var(--txt-color-1);
+	margin-right: 14px;
+}
+
+.social-link:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.social-link:not(:last-child)::after {
+	position: absolute;
+	content: '';
+	bottom: -10px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--txt-color-1);
+}
+
+
+
+
+.about-me {
+	margin-top: 210px;
+}
+
+.text-slide {
+	margin-top: 210px;
+	margin-bottom: 60px;
+	border: 1px solid var(--txt-color-1);
+	border-left: none;
+	border-right: none;
+	height: 50px;
+}
+
+.about-me-flex {
+	margin-top: 100px;
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.img-first-about-me {
+	border-top-left-radius: 410px;
+}
+
+.info-block-about-me {
+	flex: 1;
+}
+
+.h2-visual-about-me {
+	color: var(--txt-color-1);
+	margin-bottom: 10px;
+}
+
+.h3-visual-about-me {
+	color: var(--main-color-2);
+	margin-bottom: 20px;
+}
+
+.about-me__padding-left {
+	padding-left: 40px;
+}
+
+.bordered-block-about-me {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.info-text-about-me {
+	font-family: 'Futura PT';
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 130%;
+}
+
+.signature-text {
+	font-family: 'Caravan';
+	font-size: 36px;
+}
+
+.img-second-about-me {}
+
+.line-about-me {
+	height: 1px;
+	width: 100%;
+	background: var(--txt-color-1);
+}
+
+
+.protfolio {
+	margin-top: 210px;
+}
+
+.protfolio-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttons-flex {
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+.protfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 360px);
+	grid-template-rows: repeat(8, 166px);
+	gap: 40px;
+}
+
+.portfolio-photo img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-photo1 {
+	grid-row: 1/4;
+}
+
+.portfolio-photo2 {
+	grid-row: 1/3;
+}
+
+.portfolio-photo3 {
+	grid-row: 1/4;
+}
+
+.portfolio-photo4 {
+	grid-row: 4/6;
+
+}
+
+.portfolio-photo5 {
+	grid-row: 3/5;
+}
+
+.portfolio-photo6 {
+	grid-row: 4/6;
+
+}
+
+.portfolio-photo7 {
+	grid-row: 5/8;
+}
+
+.portfolio-photo8 {
+	grid-row: 6/8;
+}
+
+.portfolio-photo9 {
+	grid-row: 6/8;
+
+}
+
+.price-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price-card {
+	padding: 40px 60px;
+	border: 2px solid var(--main-color-1);
+}
+
+.h2-visual-price {
+	color: var(--main-color-1);
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.ul-price {
+	margin-bottom: 30px;
+	list-style: circle;
+	padding-left: 30px;
+}
+
+.li-price {
+	font-family: 'Futura PT';
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 130%;
+}
+
+.price-text {
+	font-family: 'Futura PT';
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 130%;
+}
+
+.price-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price-link p {
+	font-family: 'Futura PT';
+	font-size: 32px;
+	font-weight: 500;
+	color: var(--txt-color-1);
+}
+
+.contact {}
+
+.contact-container {
+	max-width: 660px;
+	margin: 0 auto;
+}
+
+.h2-visual-contact {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.contact-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contact-flex-info {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 15px 0px;
+}
+
+.info-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 5px 0;
+}
+
+.info-bold {
+	font-family: 'Futura PT';
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 130%;
+}
+
+.info-normal {
+	font-family: 'Futura PT';
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 130%;
+}
+
+.footer {
+	margin-top: 210px;
+}
+
+.footer-nav {
+	border: 2px solid var(--txt-color-1);
+	border-bottom: none;
+	padding: 30px;
+}
+
+.footer-ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer-column-links {}
+
+.left {
+	padding-left: 30px;
+}
+
+.footer-li {}
+
+.footer-link {
+	font-family: 'Futura PT';
+	font-weight: 500;
+	font-size: 18px;
+	color: var(--txt-color-1);
+}
+
+.footer-logo {}
+
+.right {}
+
+@media (max-width: 1170px) {
+	.protfolio-grid {
+		grid-template-columns: repeat(2, 360px);
+		grid-template-rows: repeat(11, 166px);
+	}
+
+	.portfolio-photo3 {
+		grid-row: 8/10;
+	}
+
+	.portfolio-photo6 {
+		grid-row: 8/10;
+	}
+
+	.portfolio-photo9 {
+		grid-row: 10/12;
+	}
+
+	.price-card {
+		padding: 40px;
+	}
+}
+
+@media (max-width: 1100px) {
+
+	.main {
+		margin-top: 60px;
+	}
+
+	.container {
+		max-width: 620px;
+	}
+
+	.first-block {
+		display: none;
+	}
+
+	.third-block {
+		display: none;
+	}
+
+	.right {
+		width: max-content;
+	}
+
+	.second-block-tablet {
+		position: absolute;
+		top: 175px;
+		right: -70%;
+		display: block;
+	}
+
+	.img-second-about-me {
+		display: none;
+	}
+
+	.about-me-flex {
+		justify-content: start;
+	}
+
+	.price-flex {
+		flex-direction: column;
+		gap: 40px 0px;
+	}
+
+	.price-card {
+		width: 320px;
+	}
+
+	.footer-ul {
+		flex-direction: column;
+		gap: 32px 0;
+	}
+
+	.left {
+		padding-left: 0;
+	}
+
+}
+
+@media (max-width: 790px) {
+	.protfolio-grid {
+		grid-template-columns: repeat(2, 200px);
+	}
+}
+
+@media (max-width: 660px) {
+	.container {
+		max-width: 300px;
+	}
+
+	.contact-flex {
+		flex-direction: column;
+		gap: 60px 0;
+		align-items: start;
+	}
+
+	.main {
+		margin-top: 0px;
+	}
+
+	.main-flex {
+		justify-content: center;
+	}
+
+	.h1-visual-main {
+		left: 0;
+		width: 290px;
+		bottom: -105px;
+		line-height: 100%;
+	}
+
+	.h1-visual-main::before {
+		display: none;
+	}
+
+	.h3-visual-main-second-tablet {
+		display: none;
+	}
+
+	.second-block-tablet {
+		top: 120%;
+		left: 0;
+	}
+
+	.header-column-links {
+		display: none;
+	}
+
+	.header__button-menu {
+		display: block;
+	}
+
+	.header-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.main-img-1 {
+		width: 310px;
+	}
+
+	.about-me-flex {
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+	}
+
+	.about-me__padding-left {
+		padding-left: 0;
+	}
+
+	.buttons-flex {
+		width: 320px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 460px) {
+	.protfolio-grid {
+		grid-template-columns: repeat(1, 320px);
+		grid-template-rows: repeat(9, 480px);
+		gap: 45px 0px;
+	}
+
+	.portfolio-photo1 {
+		grid-row: 1/2;
+	}
+
+	.portfolio-photo2 {
+		grid-row: 2/3;
+	}
+
+	.portfolio-photo3 {
+		grid-row: 3/4;
+	}
+
+
+	.portfolio-photo4 {
+		grid-row: 4/5;
+
+	}
+
+	.portfolio-photo5 {
+		grid-row: 5/6;
+	}
+
+	.portfolio-photo6 {
+		grid-row: 6/7;
+	}
+
+
+	.portfolio-photo7 {
+		grid-row: 7/8;
+	}
+
+	.portfolio-photo8 {
+		grid-row: 8/9;
+	}
+
+	.portfolio-photo9 {
+		grid-row: 9/10;
+	}
+
+	.price-card {
+		width: 270px;
+		padding: 40px 20px;
+	}
+}
