@@ -106,8 +106,8 @@ body {
 	overflow-x: hidden;
 }
 
-.lock {
-	overflow: hidden;
+html {
+	scroll-behavior: smooth;
 }
 
 a {
@@ -134,7 +134,7 @@ ul {
 	opacity: 0;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 0%;
 	height: 0vh;
 	background-color: #fff;
 	z-index: 2;
@@ -142,6 +142,8 @@ ul {
 }
 
 .menu-mobile.active {
+	width: 100%;
+	display: block;
 	opacity: 1;
 	height: 100vh;
 }
@@ -178,6 +180,10 @@ ul {
 
 
 /* GLOBAL */
+
+.lock {
+	overflow: hidden;
+}
 
 .h1 {
 	font-family: 'MakLight';
@@ -480,12 +486,11 @@ ul {
 }
 
 .about-me {
-	margin-top: 210px;
+	padding-top: 210px;
 }
 
 .text-slide {
 	position: relative;
-	margin-top: 210px;
 	margin-bottom: 60px;
 	border: 1px solid var(--txt-color-1);
 	border-left: none;
@@ -549,8 +554,8 @@ ul {
 }
 
 
-.protfolio {
-	margin-top: 210px;
+.portfolio {
+	padding-top: 210px;
 }
 
 .protfolio-flex {
@@ -570,7 +575,7 @@ ul {
 .protfolio-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 360px);
-	grid-template-rows: repeat(8, 166px);
+	grid-template-rows: repeat(7, 166px);
 	gap: 40px;
 }
 
@@ -617,6 +622,10 @@ ul {
 .portfolio-photo9 {
 	grid-row: 6/8;
 
+}
+
+.price {
+	padding-top: 210px;
 }
 
 .price-flex {
@@ -669,7 +678,9 @@ ul {
 	color: var(--txt-color-1);
 }
 
-.contact {}
+.contact {
+	padding-top: 210px;
+}
 
 .contact-container {
 	max-width: 660px;
