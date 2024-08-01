@@ -193,6 +193,39 @@ ul {
 }
 
 
+.image-view {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgb(30, 30, 30, 0.8);
+	z-index: 3;
+}
+
+.view-container {
+	display: none;
+	position: fixed;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	border: 3px solid var(--txt-color-1);
+	transform: translate(-50%, -50%);
+	animation: modalAnim 1.2s;
+}
+
+.image-view.active,
+.view-container.active {
+	display: block;
+}
+
+.view-container-img {
+	object-fit: cover;
+	width: 480px;
+	height: 100%;
+}
+
 .modal-service {
 	display: none;
 	position: fixed;
@@ -744,6 +777,42 @@ ul {
 	gap: 40px;
 }
 
+.portfolio-photo {
+	position: relative;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+.portfolio-photo::after {
+	position: absolute;
+	content: 'Look';
+	font-family: 'MakLight';
+	font-size: 24px;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.portfolio-photo::before {
+	opacity: 0;
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(30, 30, 30, 0.5);
+	transition: all 0.3s ease-in-out;
+}
+
+.portfolio-photo:hover::after,
+.portfolio-photo:hover::before {
+	opacity: 1;
+}
+
 .portfolio-photo img {
 	object-fit: cover;
 	width: 100%;
@@ -1097,6 +1166,10 @@ ul {
 }
 
 @media (max-width: 460px) {
+	.view-container-img {
+		width: 300px;
+	}
+
 	.h2-visual-modal {
 		font-size: 32px;
 	}

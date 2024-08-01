@@ -2,9 +2,37 @@ const btn_menu = document.querySelector('.header__button-menu');
 const menu_mobile = document.querySelector('.menu-mobile');
 const menuLinks = document.querySelectorAll('.menu-mob-link');
 const btnShowModal = document.querySelectorAll('.price-btn');
-const btnCloseModal = document.querySelector('.modal-close-btn');
+const btnCloseModal = document.querySelector('#close-modal');
+const btnCloseViewer = document.querySelector('#close-img-view');
 const modalService = document.querySelector('.modal-service');
 const modalContainer = document.querySelector('.modal-container');
+const portfolioPhotos = document.querySelectorAll('.portfolio-photo');
+const viewBlock = document.querySelector('.image-view');
+const viewContainer = document.querySelector('.view-container');
+let imageView = document.querySelector('.view-container-img');
+
+portfolioPhotos.forEach((photo) => {
+	photo.addEventListener('click', function () {
+		if (!imageView) {
+			let createdImage = document.createElement('img');
+			createdImage.src = photo.firstElementChild.src;
+			createdImage.classList.add('view-container-img');
+			imageView = createdImage;
+			viewContainer.appendChild(createdImage);
+			viewBlock.classList.toggle('active');
+			viewContainer.classList.toggle('active');
+			document.body.classList.toggle('lock');
+		}
+	});
+});
+
+btnCloseViewer.addEventListener('click', function () {
+	imageView.remove();
+	imageView = null;
+	viewBlock.classList.toggle('active');
+	viewContainer.classList.toggle('active');
+	document.body.classList.toggle('lock');
+});
 
 btn_menu.addEventListener('click', function () {
 	btn_menu.classList.toggle('active');
