@@ -1,3 +1,4 @@
+// Переменные для элементов
 const btn_menu = document.querySelector('.header__button-menu');
 const menu_mobile = document.querySelector('.menu-mobile');
 const menuLinks = document.querySelectorAll('.menu-mob-link');
@@ -9,98 +10,89 @@ const modalContainer = document.querySelector('.modal-container');
 const portfolioPhotos = document.querySelectorAll('.portfolio-photo');
 const viewBlock = document.querySelector('.image-view');
 const viewContainer = document.querySelector('.view-container');
-let imageView = document.querySelector('.view-container-img');
+let imageView = null;
 
+// Функция переключения классов
+function toggleClass(elements, className) {
+	elements.forEach((el) => el.classList.toggle(className));
+}
+
+// Обработчик для показа изображения
 portfolioPhotos.forEach((photo) => {
 	photo.addEventListener('click', function () {
 		if (!imageView) {
-			let createdImage = document.createElement('img');
-			createdImage.src = photo.firstElementChild.src;
-			createdImage.classList.add('view-container-img');
-			imageView = createdImage;
-			viewContainer.appendChild(createdImage);
-			viewBlock.classList.toggle('active');
-			viewContainer.classList.toggle('active');
-			document.body.classList.toggle('lock');
+			imageView = document.createElement('img');
+			imageView.src = photo.firstElementChild.src;
+			imageView.classList.add('view-container-img');
+			viewContainer.appendChild(imageView);
 		}
+		toggleClass([viewBlock, viewContainer, document.body], 'active');
 	});
 });
 
+// Обработчик для закрытия просмотра изображения
 btnCloseViewer.addEventListener('click', function () {
-	imageView.remove();
-	imageView = null;
-	viewBlock.classList.toggle('active');
-	viewContainer.classList.toggle('active');
-	document.body.classList.toggle('lock');
+	if (imageView) {
+		imageView.remove();
+		imageView = null;
+	}
+	toggleClass([viewBlock, viewContainer, document.body], 'active');
 });
 
+// Обработчик для меню
 btn_menu.addEventListener('click', function () {
-	btn_menu.classList.toggle('active');
-	menu_mobile.classList.toggle('active');
-	document.body.classList.toggle('lock');
+	toggleClass([btn_menu, menu_mobile, document.body], 'active');
 });
 
+// Закрытие меню при клике на ссылку
 menuLinks.forEach((link) => {
 	link.addEventListener('click', function () {
-		btn_menu.classList.remove('active');
-		menu_mobile.classList.remove('active');
-		document.body.classList.remove('lock');
+		toggleClass([btn_menu, menu_mobile, document.body], 'active');
 	});
 });
 
+// Обработчик для модального окна
 btnShowModal.forEach((btn) => {
 	btn.addEventListener('click', function () {
-		modalService.classList.toggle('show');
-		modalContainer.classList.toggle('show');
-		document.body.classList.toggle('lock');
+		toggleClass([modalService, modalContainer, document.body], 'show');
 	});
 });
 
+// Закрытие модального окна
 btnCloseModal.addEventListener('click', function () {
-	modalService.classList.toggle('show');
-	modalContainer.classList.toggle('show');
-	document.body.classList.toggle('lock');
+	toggleClass([modalService, modalContainer, document.body], 'show');
 });
 
+// Анимация текста
 window.onload = function () {
-	const textSlideAboutMe = document.querySelector('.text-slide-about-me');
-	const textSlidePortfolio = document.querySelector('.text-slide-portfolio');
-	const textSlidePrice = document.querySelector('.text-slide-price');
-	const textSlideContact = document.querySelector('.text-slide-contact');
+	const textSlides = [
+		document.querySelector('.text-slide-about-me'),
+		document.querySelector('.text-slide-portfolio'),
+		document.querySelector('.text-slide-price'),
+		document.querySelector('.text-slide-contact'),
+	];
 
-	const aboutMe = createEl('p', textSlideAboutMe);
-	const portfolio = createEl('p', textSlidePortfolio);
-	const price = createEl('p', textSlidePrice);
-	const contact = createEl('p', textSlideContact);
+	const textElements = textSlides.map((slide) => createEl('p', slide));
 
 	setInterval(() => {
-		leftEl(aboutMe);
-		leftEl(portfolio);
-		leftEl(price);
-		leftEl(contact);
+		textElements.forEach(leftEl);
 	}, 5);
 
 	function createEl(elTag, parentEl) {
 		const arrayElemets = [];
-		let elementWidth;
-
-		if (parentEl.clientWidth > 600) {
-			elementWidth = parentEl.clientWidth / 4;
-		} else {
-			elementWidth = parentEl.clientWidth / 2;
-		}
+		const elementWidth =
+			parentEl.clientWidth > 600
+				? parentEl.clientWidth / 4
+				: parentEl.clientWidth / 2;
 
 		for (let i = 0; i < 10; i++) {
 			const createdElement = document.createElement(elTag);
 			createdElement.className = `paragraph-list anim-item-${i + 1}`;
 			createdElement.innerText = parentEl.dataset.text;
-
 			createdElement.style.width = `${elementWidth}px`;
-
 			createdElement.style.left = `${
 				window.innerWidth + (elementWidth + 20) * i
 			}px`;
-
 			parentEl.appendChild(createdElement);
 			arrayElemets.push(createdElement);
 		}

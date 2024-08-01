@@ -142,6 +142,7 @@ ul {
 }
 
 
+/* Menu Mob */
 .menu-mobile {
 	position: absolute;
 	display: block;
@@ -182,7 +183,6 @@ ul {
 	color: var(--txt-color-1);
 }
 
-
 .paragraph-list {
 	position: absolute;
 	top: 50%;
@@ -192,6 +192,7 @@ ul {
 	transform: translate(0%, -50%);
 }
 
+/*Image View*/
 
 .image-view {
 	display: none;
@@ -225,6 +226,8 @@ ul {
 	width: 480px;
 	height: 100%;
 }
+
+/* Modal */
 
 .modal-service {
 	display: none;
@@ -304,25 +307,6 @@ ul {
 .modal-input:focus {
 	outline: none;
 }
-
-
-@keyframes modalAnim {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-.input-name {}
-
-.input-surname {}
-
-.input-phone {}
-
-.input-city {}
 
 .for-pay {
 	font-family: 'Futura PT';
@@ -683,6 +667,9 @@ ul {
 	background-color: var(--txt-color-1);
 }
 
+
+/* About me */
+
 .about-me {
 	padding-top: 210px;
 }
@@ -743,15 +730,13 @@ ul {
 	font-size: 36px;
 }
 
-.img-second-about-me {}
-
 .line-about-me {
 	height: 1px;
 	width: 100%;
 	background: var(--txt-color-1);
 }
 
-
+/* Portfolio */
 .portfolio {
 	padding-top: 210px;
 }
@@ -858,6 +843,8 @@ ul {
 
 }
 
+
+/* Price */
 .price {
 	padding-top: 210px;
 }
@@ -916,6 +903,7 @@ ul {
 	color: var(--txt-color-1);
 }
 
+/* Contact */
 .contact {
 	padding-top: 210px;
 }
@@ -964,6 +952,7 @@ ul {
 	line-height: 130%;
 }
 
+/* Footer */
 .footer {
 	margin-top: 210px;
 }
@@ -980,13 +969,9 @@ ul {
 	justify-content: space-between;
 }
 
-.footer-column-links {}
-
 .left {
 	padding-left: 30px;
 }
-
-.footer-li {}
 
 .footer-link {
 	font-family: 'Futura PT';
@@ -994,10 +979,6 @@ ul {
 	font-size: 18px;
 	color: var(--txt-color-1);
 }
-
-.footer-logo {}
-
-.right {}
 
 @media (max-width: 1170px) {
 	.protfolio-grid {
@@ -1226,5 +1207,15 @@ ul {
 	.price-card {
 		width: 270px;
 		padding: 40px 20px;
+	}
+}
+
+@keyframes modalAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
