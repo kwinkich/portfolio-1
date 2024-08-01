@@ -1,5 +1,6 @@
 const btn_menu = document.querySelector('.header__button-menu');
 const menu_mobile = document.querySelector('.menu-mobile');
+const menuLinks = document.querySelectorAll('.menu-mob-link');
 const btnShowModal = document.querySelectorAll('.price-btn');
 const btnCloseModal = document.querySelector('.modal-close-btn');
 const modalService = document.querySelector('.modal-service');
@@ -9,6 +10,14 @@ btn_menu.addEventListener('click', function () {
 	btn_menu.classList.toggle('active');
 	menu_mobile.classList.toggle('active');
 	document.body.classList.toggle('lock');
+});
+
+menuLinks.forEach((link) => {
+	link.addEventListener('click', function () {
+		btn_menu.classList.remove('active');
+		menu_mobile.classList.remove('active');
+		document.body.classList.remove('lock');
+	});
 });
 
 btnShowModal.forEach((btn) => {
