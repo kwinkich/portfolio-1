@@ -8,6 +8,52 @@
 		<title>Photo UK</title>
 	</head>
 	<body>
+		<section class="modal-service">
+			<div class="modal-container">
+				<button class="modal-close-btn">
+					<img src="./images/icons/close.svg" alt="" />
+				</button>
+				<div class="modal-flex">
+					<h2 class="h2 h2-visual-modal">Fill in the form</h2>
+					<form action="#" class="form-flex">
+						<input
+							class="modal-input input-name"
+							type="text"
+							placeholder="Name"
+						/>
+						<input
+							class="modal-input input-surname"
+							type="text"
+							placeholder="Surname"
+						/>
+						<input
+							class="modal-input input-phone"
+							type="mobile"
+							placeholder="Phone"
+						/>
+						<input
+							class="modal-input input-city"
+							type="text"
+							placeholder="City"
+						/>
+						<p class="for-pay">For pay 7000 usd</p>
+						<button class="modal-btn">Pay</button>
+						<div>
+							<input
+								class="modal-custom-checkbox"
+								type="checkbox"
+								id="agree"
+								name="agree"
+							/>
+							<label for="agree" class="modal-agree">
+								I agree to the processing of personal data
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
 		<section class="menu-mobile">
 			<nav class="menu-mob-nav">
 				<ul class="menu-mob-ul">
@@ -213,14 +259,14 @@
 						<li class="li-price">Help with posing</li>
 					</ul>
 					<p class="price-text">Price:</p>
-					<a href="#" class="price-link">
-						<p>70 usd.</p>
+					<button href="#" class="price-btn">
+						<p data-price="70">70 usd.</p>
 						<img
-							class="price-link-arrow"
+							class="price-btn-arrow"
 							src="./images/icons/arrow-price.svg"
 							alt="Arrow"
 						/>
-					</a>
+					</button>
 				</article>
 				<article class="price-card">
 					<h2 class="h2 h2-visual-price">
@@ -235,14 +281,14 @@
 					</ul>
 					<div>
 						<p class="price-text">Ціна:</p>
-						<a href="#" class="price-link">
-							<p>120 usd.</p>
+						<button class="price-btn">
+							<p data-price="120">120 usd.</p>
 							<img
-								class="price-link-arrow"
+								class="price-btn-arrow"
 								src="./images/icons/arrow-price.svg"
 								alt="Arrow"
 							/>
-						</a>
+						</button>
 					</div>
 				</article>
 				<article class="price-card">
@@ -257,14 +303,14 @@
 						<li class="li-price">Several locations</li>
 					</ul>
 					<p class="price-text">Ціна:</p>
-					<a href="#" class="price-link">
-						<p>350 usd.</p>
+					<button class="price-btn">
+						<p data-price="350">350 usd.</p>
 						<img
-							class="price-link-arrow"
+							class="price-btn-arrow"
 							src="./images/icons/arrow-price.svg"
 							alt="Arrow"
 						/>
-					</a>
+					</button>
 				</article>
 			</div>
 		</section>

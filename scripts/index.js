@@ -1,8 +1,27 @@
 const btn_menu = document.querySelector('.header__button-menu');
 const menu_mobile = document.querySelector('.menu-mobile');
+const btnShowModal = document.querySelectorAll('.price-btn');
+const btnCloseModal = document.querySelector('.modal-close-btn');
+const modalService = document.querySelector('.modal-service');
+const modalContainer = document.querySelector('.modal-container');
+
 btn_menu.addEventListener('click', function () {
 	btn_menu.classList.toggle('active');
 	menu_mobile.classList.toggle('active');
+	document.body.classList.toggle('lock');
+});
+
+btnShowModal.forEach((btn) => {
+	btn.addEventListener('click', function () {
+		modalService.classList.toggle('show');
+		modalContainer.classList.toggle('show');
+		document.body.classList.toggle('lock');
+	});
+});
+
+btnCloseModal.addEventListener('click', function () {
+	modalService.classList.toggle('show');
+	modalContainer.classList.toggle('show');
 	document.body.classList.toggle('lock');
 });
 
@@ -22,7 +41,7 @@ window.onload = function () {
 		leftEl(portfolio);
 		leftEl(price);
 		leftEl(contact);
-	}, 2);
+	}, 5);
 
 	function createEl(elTag, parentEl) {
 		const arrayElemets = [];
