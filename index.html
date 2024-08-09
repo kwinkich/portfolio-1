@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.min.css" />
+		<!-- <link rel="stylesheet" href="./fonts/Mark/stylesheet.css" /> -->
+		<title>Photo UK</title>
+	</head>
+	<body>
+		<!-- GLOBAL BLOCKS -->
+		<div class="image-view">
+			<div class="image-view__container">
+				<button id="close-img-view" class="modal-close-btn">
+					<img src="./images/icons/close.svg" alt="" />
+				</button>
+			</div>
+		</div>
+
+		<section class="modal-service">
+			<div class="modal-service__container">
+				<button id="close-modal" class="modal-close-btn">
+					<img src="./images/icons/close.svg" alt="" />
+				</button>
+				<div class="modal-service__flex">
+					<h2 class="h2 modal-service__h2-visual">Fill in the form</h2>
+					<form action="#" class="form-flex">
+						<input
+							class="modal-service__input input-name"
+							type="text"
+							placeholder="Name"
+						/>
+						<input
+							class="modal-service__input input-surname"
+							type="text"
+							placeholder="Surname"
+						/>
+						<input
+							class="modal-service__input input-phone"
+							type="text"
+							placeholder="Phone"
+						/>
+						<input
+							class="modal-service__input input-city"
+							type="text"
+							placeholder="City"
+						/>
+						<p class="for-pay">For pay 7000 usd</p>
+						<button class="modal-service__btn">Pay</button>
+						<div>
+							<input
+								class="modal-service__custom-checkbox"
+								type="checkbox"
+								id="agree"
+								name="agree"
+							/>
+							<label for="agree" class="modal-service__agree">
+								I agree to the processing of personal data
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="menu-mobile">
+			<nav class="menu-mobile__nav">
+				<ul class="menu-mobile__ul">
+					<li class="menu-mobile__li">
+						<p class="menu-mobile__logo">Photos<br />UK</p>
+					</li>
+					<li class="menu-mobile__li">
+						<a class="menu-mobile__link" href="#about-me">About me</a>
+					</li>
+					<li class="menu-mobile__li">
+						<a class="menu-mobile__link" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="menu-mobile__li">
+						<a class="menu-mobile__link" href="#price">Price</a>
+					</li>
+					<li class="menu-mobile__li">
+						<a class="menu-mobile__link" href="#contact">Contacts</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<!-- GLOBAL BLOCKS -->
+
+		<!-- CONTENT BLOCKS -->
+		<header id="header" class="header">
+			<div class="header__container container">
+				<nav class="header__nav">
+					<ul class="header__ul">
+						<div class="header__column-links header__left">
+							<li class="header__li">
+								<a class="header__link" href="#about-me">About me</a>
+							</li>
+							<li class="header__li">
+								<a class="header__link" href="#portfolio">Portfolio</a>
+							</li>
+						</div>
+						<li class="header__li">
+							<p class="header__logo">Photos<br />UK</p>
+						</li>
+						<div class="header__column-links header__right">
+							<li class="header__li">
+								<a class="header__link" href="#price">Price</a>
+							</li>
+							<li class="header__li">
+								<a class="header__link" href="#contact">Contacts</a>
+							</li>
+						</div>
+					</ul>
+					<button class="header__button-menu">
+						<span class="button-menu__line line-1"></span>
+						<span class="button-menu__line line-2"></span>
+						<span class="button-menu__line line-3"></span>
+					</button>
+				</nav>
+			</div>
+		</header>
+		
+
+		<main id="main" class="main">
+			<div class="container main__flex">
+				<article class="main__first-block">
+					<h3 class="h3 main__first-block-h3-visual">
+						Professional <br />
+						Photographer
+					</h3>
+					<img class="main__img-3" src="./images/img3.png" alt="Фотограф" />
+					<a class="main__link link-padding" href="#about-me">
+						<p>More</p>
+						<div class="circle-link"></div>
+					</a>
+				</article>
+				<article class="main__second-block">
+					<article class="main__second-block-tablet">
+						<h3 class="h3 main__second-block-tablet-h3-visual">
+							Professional <br />
+							Photographer
+						</h3>
+						<a class="main__link link-padding" href="#about-me">
+							<p>More</p>
+							<div class="circle-link"></div>
+						</a>
+					</article>
+					<h1 class="h1 main__h1-visual"><span>Maria</span> Tsyba</h1>
+					<img class="main__img-1" src="./images/img1.png" alt="Фотограф" />
+				</article>
+				<article class="main__third-block">
+					<img class="main__img-2" src="./images/img2.png" alt="Фотограф" />
+					<a class="social-link" href="#">
+						<p>Viber</p>
+						<div class="arrow-link">
+							<img src="./images/icons/Arrow.svg" alt="" />
+						</div>
+					</a>
+					<a class="social-link" href="#">
+						<p>Telegram</p>
+						<div class="arrow-link">
+							<img src="./images/icons/Arrow.svg" alt="" />
+						</div>
+					</a>
+					<a class="social-link" href="#">
+						<p>Instagram</p>
+						<div class="arrow-link">
+							<img src="./images/icons/Arrow.svg" alt="" />
+						</div>
+					</a>
+				</article>
+			</div>
+		</main>
+
+		<section id="about-me" class="about-me">
+			<div data-text="About me" class="text-slide about-me__text-slide"></div>
+			<div class="container about-me__flex">
+				<img
+					class="about-me__img-first"
+					src="./images/img4.png"
+					alt="Photographer"
+				/>
+				<article class="about-me__info-block">
+					<h2 class="h2 about-me__h2-visual about-me__padding-left">
+						Maria Tsyba
+					</h2>
+					<h3 class="h3 about-me__h3-visual about-me__padding-left">
+						Professional <br />
+						Photographer
+					</h3>
+					<div class="about-me__line"></div>
+					<div class="about-me__bordered-block about-me__padding-left">
+						<p class="about-me__info-text">
+							Photography is my vocation and passion, <br />
+							photography is the meaning of my life!
+						</p>
+						<p class="about-me__signature-text">Maria Tsyba</p>
+					</div>
+					<div class="about-me__line"></div>
+					<a
+						class="main__link link-padding about-me__padding-left"
+						href="#portfolio"
+					>
+						<p>Portfolio</p>
+						<div class="circle-link"></div>
+					</a>
+				</article>
+				<img
+					class="about-me__img-second"
+					src="./images/img4-1.png"
+					alt="Photographer"
+				/>
+			</div>
+		</section>
+
+		<section id="portfolio" class="portfolio">
+			<div data-text="Portfolio" class="text-slide portfolio__text-slide"></div>
+			<div class="container portfolio__flex">
+				<div class="portfolio__buttons-flex">
+					<button class="portfolio__button-navigate active">All</button>
+					<button class="portfolio__button-navigate">Weddings</button>
+					<button class="portfolio__button-navigate">Portraits</button>
+					<button class="portfolio__button-navigate">Family</button>
+				</div>
+				<div class="portfolio__grid">
+					<div class="portfolio__photo1 portfolio__photo">
+						<img class="" src="./images/photo1.png" alt="Photo1" />
+					</div>
+					<div class="portfolio__photo2 portfolio__photo">
+						<img src="./images/photo2.png" alt="Photo2" />
+					</div>
+					<div class="portfolio__photo3 portfolio__photo">
+						<img src="./images/photo3.png" alt="Photo3" />
+					</div>
+					<div class="portfolio__photo4 portfolio__photo">
+						<img src="./images/photo4.png" alt="Photo4" />
+					</div>
+					<div class="portfolio__photo5 portfolio__photo">
+						<img src="./images/photo5.png" alt="Photo5" />
+					</div>
+					<div class="portfolio__photo6 portfolio__photo">
+						<img src="./images/photo6.png" alt="Photo6" />
+					</div>
+					<div class="portfolio__photo7 portfolio__photo">
+						<img src="./images/photo7.png" alt="Photo7" />
+					</div>
+					<div class="portfolio__photo8 portfolio__photo">
+						<img src="./images/photo8.png" alt="Photo8" />
+					</div>
+					<div class="portfolio__photo9 portfolio__photo">
+						<img src="./images/photo9.png" alt="Photo9" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="price" class="price">
+			<div data-text="Prices" class="text-slide price__text-slide"></div>
+			<div class="container price__flex">
+				<article class="price__card">
+					<h2 class="h2 price__h2-visual">
+						Regular <br />
+						photo session
+					</h2>
+					<ul class="price__ul">
+						<li class="price__li">1 hour of filming</li>
+						<li class="price__li">60 unprocessed photos</li>
+						<li class="price__li">25 photos with processing</li>
+						<li class="price__li">Help with posing</li>
+					</ul>
+					<p class="price__text">Price:</p>
+					<button class="price__btn">
+						70 usd.
+						<img
+							class="price__btn-arrow"
+							src="./images/icons/arrow-price.svg"
+							alt="Arrow"
+						/>
+					</button>
+				</article>
+				<article class="price__card">
+					<h2 class="h2 price__h2-visual">
+						Professional <br />
+						photo session
+					</h2>
+					<ul class="price__ul">
+						<li class="price__li">2.5 hours of filming</li>
+						<li class="price__li">120 unprocessed photos</li>
+						<li class="price__li">80 photos with processing</li>
+						<li class="price__li">Several locations</li>
+					</ul>
+					<div>
+						<p class="price__text">Price:</p>
+						<button class="price__btn">
+							120 usd.
+							<img
+								class="price-btn-arrow"
+								src="./images/icons/arrow-price.svg"
+								alt="Arrow"
+							/>
+						</button>
+					</div>
+				</article>
+				<article class="price__card">
+					<h2 class="h2 price__h2-visual">
+						Luxury <br />
+						photo session
+					</h2>
+					<ul class="price__ul">
+						<li class="price__li">3 hours of filming</li>
+						<li class="price__li">200 unprocessed photos</li>
+						<li class="price__li">120 photos with processing</li>
+						<li class="price__li">Several locations</li>
+					</ul>
+					<p class="price__text">Price:</p>
+					<button class="price__btn">
+						350 usd.
+						<img
+							class="price__btn-arrow"
+							src="./images/icons/arrow-price.svg"
+							alt="Arrow"
+						/>
+					</button>
+				</article>
+			</div>
+		</section>
+
+		<section id="contact" class="contact">
+			<div data-text="Contacts" class="text-slide contact__text-slide"></div>
+			<div class="container">
+				<h2 class="h2 contact__h2-visual">Contact me</h2>
+				<div class="contact__container contact__flex">
+					<article class="contact__flex-info">
+						<div class="contact__info-flex">
+							<p class="contact__info-bold">Working hours</p>
+							<p class="contact__info-normal">8:00 - 22:00</p>
+						</div>
+						<div class="contact__info-flex">
+							<p class="contact__info-bold">Work schedule</p>
+							<p class="contact__info-normal">Mon, Tue, Wed, Thu, Fri</p>
+						</div>
+						<div class="contact__info-flex">
+							<p class="contact__info-bold">Work phone number</p>
+							<p class="contact__info-normal">+1 408 888 8888</p>
+						</div>
+					</article>
+					<div>
+						<a class="social-link" href="#">
+							<p>Viber</p>
+							<div class="arrow-link">
+								<img src="./images/icons/Arrow.svg" alt="" />
+							</div>
+						</a>
+						<a class="social-link" href="#">
+							<p>Telegram</p>
+							<div class="arrow-link">
+								<img src="./images/icons/Arrow.svg" alt="" />
+							</div>
+						</a>
+						<a class="social-link" href="#">
+							<p>Instagram</p>
+							<div class="arrow-link">
+								<img src="./images/icons/Arrow.svg" alt="" />
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<nav class="footer__nav">
+					<ul class="footer__ul">
+						<div class="footer__column-links footer__left">
+							<li class="footer__li">
+								<a class="footer__link" href="#">Privacy policy</a>
+							</li>
+						</div>
+						<li class="footer__li">
+							<p class="header__logo">Photos<br />UK</p>
+						</li>
+						<div class="footer__column-links footer__right">
+							<li class="footer__li">
+								<a class="footer__link" href="#header">Home</a>
+							</li>
+						</div>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+		<!-- CONTENT BLOCKS -->
+
+		<script src="js/main.min.js"></script>
+	</body>
+</html>
